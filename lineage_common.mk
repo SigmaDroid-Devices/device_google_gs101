@@ -25,6 +25,10 @@ PRODUCT_PRODUCT_PROPERTIES += ro.opa.eligible_device=true
 PRODUCT_PACKAGES += \
     EuiccSupportPixelOverlay
 
+# HbmSVManager
+PRODUCT_COPY_FILES += \
+    device/google/gs101/conf/disable_hbmsv.sh:$(TARGET_COPY_OUT_SYSTEM)/bin/disable_hbmsv.sh
+
 ifneq ($(BOARD_WITHOUT_RADIO),true)
 # product permissions XML from stock
 PRODUCT_COPY_FILES += \
